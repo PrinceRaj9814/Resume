@@ -2,38 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Prince Raj - Frontend Developer Resume</title>
+    <title>Prince Raj | Frontend Developer</title>
+
     <style>
+        :root {
+            --primary: #1f2933;
+            --accent: #2563eb;
+            --light-bg: #f5f7fa;
+            --border: #e5e7eb;
+            --muted: #6b7280;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background: #f2f2f2;
             margin: 0;
-            padding: 20px;
+            padding: 30px;
+            background: var(--light-bg);
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: #111827;
         }
 
         .resume {
-            max-width: 900px;
+            max-width: 950px;
             margin: auto;
             background: #ffffff;
             display: grid;
-            grid-template-columns: 250px 1fr;
-            border-radius: 8px;
+            grid-template-columns: 280px 1fr;
+            border-radius: 10px;
             overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
         }
 
+        /* LEFT PANEL */
         .left {
-            background: #1f2933;
-            color: white;
-            padding: 20px;
+            background: var(--primary);
+            color: #ffffff;
+            padding: 30px 25px;
         }
 
         .photo {
-            width: 120px;
-            height: 120px;
-            background: #ccc;
-            margin: 0 auto 20px;
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 25px;
             border-radius: 50%;
             overflow: hidden;
+            border: 4px solid #ffffff20;
         }
 
         .photo img {
@@ -43,44 +59,115 @@
         }
 
         .left h3 {
-            margin-top: 20px;
-            border-bottom: 1px solid #ffffff55;
-            padding-bottom: 5px;
+            margin-top: 25px;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #ffffff40;
+            padding-bottom: 6px;
+        }
+
+        .left p,
+        .left li {
+            font-size: 14px;
+            color: #e5e7eb;
+            line-height: 1.6;
         }
 
         .left ul {
             list-style: none;
-            padding-left: 0;
+            padding: 0;
+            margin: 10px 0 0;
         }
 
         .left ul li {
-            margin: 6px 0;
+            margin-bottom: 6px;
         }
 
         .right {
-            padding: 20px;
+            padding: 35px 40px;
         }
 
-        h1 {
-            margin-bottom: 5px;
+        .right h1 {
+            margin: 0;
+            font-size: 34px;
+            font-weight: 700;
         }
 
         .subtitle {
-            color: gray;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
+            margin-top: 6px;
+            font-size: 16px;
+            color: var(--muted);
+            font-weight: 500;
         }
 
         .section {
-            margin-bottom: 20px;
+            margin-top: 28px;
+        }
+
+        .section h2 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: var(--primary);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 6px;
+        }
+
+        .section p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #374151;
         }
 
         .section ul {
             padding-left: 20px;
+            margin: 0;
+        }
+
+        .section ul li {
+            font-size: 15px;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .github-cta {
+            margin: 35px 0;
+            padding: 18px;
+            text-align: center;
+            background: #f1f5ff;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .github-cta a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .github-cta a:hover {
+            text-decoration: underline;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 900px) {
+            .resume {
+                grid-template-columns: 1fr;
+            }
+
+            .right {
+                padding: 30px;
+            }
         }
     </style>
 </head>
@@ -91,24 +178,19 @@
 
     <div class="left">
         <div class="photo">
-            <img src="cropped_circle_image.png" alt="Profile Photo">
+            <img src="cropped_circle_image.png" alt="Prince Raj">
         </div>
 
         <h3>Contact</h3>
-        <strong>Address: </strong>
-        <p>Rajeev Nagar, Patna, Bihar, India</p>
-        <strong>Phone: </strong>
-        <p>📞 +91 9065079240</p>
-        <strong>Email: </strong>
-        <p>📧 princeraj9814@gmail.com</p>
+        <p><strong>Address:</strong> Rajeev Nagar, Patna, Bihar, India</p>
+        <p><strong>Phone:</strong> +91 9065079240</p>
+        <p><strong>Email:</strong> princeraj9814@gmail.com</p>
 
         <h3>Technical Skills</h3>
         <ul>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript (ES6)</li>
-            <li>DOM Manipulation</li>
+            <li>HTML5, CSS3, JavaScript (ES6)</li>
             <li>Responsive Web Design</li>
+            <li>DOM Manipulation</li>
             <li>Git & GitHub</li>
             <li>Basic Python</li>
             <li>C Programming</li>
@@ -122,26 +204,55 @@
 
         <h3>Interests</h3>
         <ul>
-            <li>Web Development</li>
-            <li>Video Editing</li>
-            <li>Audio Editing</li>
-            <li>Photography</li>
-            <li>Sports</li>
-            <li>Music</li>
+            <li>Frontend Development</li>
+            <li>UI Design</li>
+            <li>Video & Audio Editing</li>
+        </ul>
+
+        <h3>Links</h3>
+        <ul>
+            <li>Linkedin :-  <a href="https://www.linkedin.com/in/princeraj9814/"> Linkedin Profile </a></li>
+            <li>Github :- <a href="https://github.com/PrinceRaj9814">GitHub Profile</a></li>
         </ul>
     </div>
 
     <div class="right">
         <h1>Prince Raj</h1>
-        <div class="subtitle">Frontend Developer | Fresher</div>
+        <div class="subtitle">Frontend Developer</div>
 
         <div class="section">
             <h2>Professional Summary</h2>
             <p>
-                Frontend Developer fresher with strong knowledge of HTML, CSS, and JavaScript.
-                Experienced in building responsive web applications and interactive user interfaces.
-                Passionate about clean UI design, API integration, and continuous learning.
+                Detail-oriented Frontend Developer with strong fundamentals in HTML, CSS, and JavaScript.
+                Skilled in building responsive, user-friendly web interfaces with clean and maintainable code.
+                Passionate about modern UI design, performance optimization, and continuous learning.
             </p>
+        </div>
+
+        <div class="section">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Sticky Notes Web App</strong> – Interactive notes application with local storage support</li>
+                <li><strong>Coffee Shop Website</strong> – Responsive business website with modern UI</li>
+                <li><strong>Shoes E-Commerce UI</strong> – Clean product layout using HTML & CSS</li>
+                <li><strong>Glassmorphism Login Form</strong> – Modern UI authentication design</li>
+                <li><strong>Developer Portfolio</strong> – Personal portfolio showcasing frontend projects</li>
+                <li><strong>Calculator Web App</strong> – Functional calculator built with JavaScript</li>
+            </ul>
+        </div>
+
+        <div class="github-cta">
+            View many more frontend projects on my 
+            <a href="https://github.com/PrinceRaj9814" target="_blank">GitHub Profile</a>
+        </div>
+
+        <div class="section">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Completed multiple frontend development certifications</li>
+                <li>Built and deployed several independent web projects</li>
+                <li>YouTube content creator with 25K+ subscribers</li>
+            </ul>
         </div>
 
         <div class="section">
@@ -153,55 +264,8 @@
                 <li><strong>Board</strong> – CBSE</li>
             </ul>
         </div>
-
-        <div class="section">
-            <h2>Major Projects</h2>
-            <ul>
-                <li>
-                    <strong>Weather Application</strong><br>
-                    • Developed a responsive weather app using HTML, CSS, and JavaScript<br>
-                    • Integrated OpenWeather API to fetch real-time weather data<br>
-                    • Displayed temperature, humidity, wind speed, and conditions
-                </li>
-                <br>
-                <li>
-                    <strong>To-Do List Application</strong><br>
-                    • Built a task management app using JavaScript and DOM manipulation<br>
-                    • Implemented add, delete, mark-complete, and reset features
-                </li>
-                <br>
-                <li>
-                    <strong>Image Slider</strong><br>
-                    • Created an interactive image slider with next/previous controls<br>
-                    • Implemented smooth transitions and responsive layout
-                </li>
-                <br>
-                <li>
-                    <strong>Dynamic Text Update (DOM)</strong><br>
-                    • Demonstrated real-time DOM manipulation using JavaScript<br>
-                    • Improved understanding of event handling and UI updates
-                </li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Achievements</h2>
-            <ul>
-                <li>Completed online certifications in web development</li>
-                <li>Built multiple frontend projects independently</li>
-                <li>YouTube content creator with 25K+ subscribers</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Links</h2>
-            <ul>
-                <li>GitHub: <a href="https://github.com/PrinceRaj9814">github.com/PrinceRaj9814</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/princeraj9814/">linkedin.com/in/princeraj9814</a></li>
-            </ul>
-        </div>
-
     </div>
+
 </div>
 
 </body>
